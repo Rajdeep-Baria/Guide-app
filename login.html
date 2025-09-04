@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <link rel="website icon" type="png" href="img/TG-Logo-2.1.png">
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="login.css">
+  <title>Document</title>
+
+</head>
+
+<body>
+  
+<div class="background">
+   <div class="main-div">
+      <div class="content-1">
+         <div class="img"> </div>
+            <div class="content-2">
+               <div class="formdiv">
+
+                  <div class="form-logo">
+                  <img class="logo" src="img/TG-Logo-2.png" alt="">
+                  </div>
+
+                <div class="inputs"> 
+                  <div class="l-in"><h1>Log-In</h1></div>
+                    <form action="" id="loginForm" >
+                        <label for="" class="labels">Username  </label>
+                        <input  type="text" name="Username" id="Usern" placeholder="Username">
+                        <br>
+                        <label for="" class="labels">Password  </label>
+                        <input type="password" name="Password" id="Passw" placeholder="Password">
+                        <input type="submit" value="LOGIN" class="btn" onsubmit="onSub()">
+                    </form>
+
+                        <p id="message"></p>
+
+                  </div>
+                </div> 
+               </div>
+       </div>
+     </div>
+  </div>
+
+  <script>
+
+const validUsername = "rajdeep";
+const validPassword = "baria09";
+
+
+document.getElementById("loginForm").addEventListener("submit", function(event) {
+  event.preventDefault(); 
+
+
+  const username = document.getElementById("Usern").value;
+  const password = document.getElementById("Passw").value;
+
+ 
+  if (username === validUsername && password === validPassword) {
+    
+    window.location.href = "m-file.html";
+  } else {
+    document.getElementById("message").innerHTML = "Invalid username or password.";
+  }
+
+  document.getElementById("Usern").value = "";
+  document.getElementById("Passw").value = "";
+});
+
+  </script>
+  
+</body>
+</html>
